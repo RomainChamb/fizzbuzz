@@ -20,4 +20,9 @@ public class FizzBuzzTest {
     public void doitRetournerfizzSiInputest3() {
         assertThat(Fizzbuzz.fizzBuzz(3)).isEqualTo("fizz");
     }
+
+    @Test
+    public void doitRetournerbuzzSiInputest5() {
+        assertThat(Fizzbuzz.fizzBuzz(5)).isEqualTo("buzz");
+    }
 }
