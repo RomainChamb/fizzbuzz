@@ -10,4 +10,9 @@ public class FizzBuzzTest {
     public void doitRetourner1SiInputest1() {
         assertThat(Fizzbuzz.fizzBuzz(1)).isEqualTo(1);
     }
+
+    @Test
+    public void doitRetourner2SiInputest2() {
+        assertThat(Fizzbuzz.fizzBuzz(2)).isEqualTo(2);
+    }
 }
