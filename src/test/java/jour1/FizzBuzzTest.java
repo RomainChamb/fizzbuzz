@@ -8,11 +8,16 @@ public class FizzBuzzTest {
 
     @Test
     public void doitRetourner1SiInputest1() {
-        assertThat(Fizzbuzz.fizzBuzz(1)).isEqualTo(1);
+        assertThat(Fizzbuzz.fizzBuzz(1)).isEqualTo("1");
     }
 
     @Test
     public void doitRetourner2SiInputest2() {
-        assertThat(Fizzbuzz.fizzBuzz(2)).isEqualTo(2);
+        assertThat(Fizzbuzz.fizzBuzz(2)).isEqualTo("2");
+    }
+
+    @Test
+    public void doitRetournerfizzSiInputest3() {
+        assertThat(Fizzbuzz.fizzBuzz(3)).isEqualTo("fizz");
     }
 }

@@ -2,7 +2,9 @@ package jour1;
 
 public class Fizzbuzz {
 
-    public static int fizzBuzz(int i) {
-        return i;
+    public static String fizzBuzz(int i) {
+        if(i == 3)
+            return "fizz";
+        return String.valueOf(i);
     }
 }
