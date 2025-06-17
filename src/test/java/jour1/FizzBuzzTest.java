@@ -8,39 +8,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzTest {
 
-    @ParameterizedTest
-    @CsvSource({"1,1"})
-    public void doitRetourner1SiInputest1(int input, String expectedOutput) {
+    @ParameterizedTest(name = "Doit retourner {1} si Input est {0}")
+    @CsvSource({"1,1", "2,2", "3, fizz", "5, buzz"})
+    public void doitRetournerLaBonneValeurCorrespondanteAInput(int input, String expectedOutput) {
         assertThat(Fizzbuzz.fizzBuzz(input)).isEqualTo(expectedOutput);
     }
 
-    @Test
-    public void doitRetourner2SiInputest2() {
-        assertThat(Fizzbuzz.fizzBuzz(2)).isEqualTo("2");
+    @ParameterizedTest(name = "Doit retourner {1} si Input est multiple de {0}")
+    @CsvSource({"6, fizz", "10, buzz", "15, fizzbuzz"})
+    public void doitRetournerLaBonneValeurCorrespondanteAInputSiMultiple(int input, String expectedOutput) {
+        assertThat(Fizzbuzz.fizzBuzz(input)).isEqualTo(expectedOutput);
     }
 
-    @Test
-    public void doitRetournerfizzSiInputest3() {
-        assertThat(Fizzbuzz.fizzBuzz(3)).isEqualTo("fizz");
-    }
-
-    @Test
-    public void doitRetournerbuzzSiInputest5() {
-        assertThat(Fizzbuzz.fizzBuzz(5)).isEqualTo("buzz");
-    }
-
-    @Test
-    public void doitRetournerfizzSiInputEstMultipleDe3() {
-        assertThat(Fizzbuzz.fizzBuzz(6)).isEqualTo("fizz");
-    }
-
-    @Test
-    public void doitRetournerbuzzSiInputEstMultipleDe5() {
-        assertThat(Fizzbuzz.fizzBuzz(10)).isEqualTo("buzz");
-    }
-
-    @Test
-    public void doitRetournerfizzbuzzSiInputEstMultipleDe15() {
-        assertThat(Fizzbuzz.fizzBuzz(15)).isEqualTo("fizzbuzz");
-    }
 }
