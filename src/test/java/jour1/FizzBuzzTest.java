@@ -1,14 +1,17 @@
 package jour1;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzTest {
 
-    @Test
-    public void doitRetourner1SiInputest1() {
-        assertThat(Fizzbuzz.fizzBuzz(1)).isEqualTo("1");
+    @ParameterizedTest
+    @CsvSource({"1,1"})
+    public void doitRetourner1SiInputest1(int input, String expectedOutput) {
+        assertThat(Fizzbuzz.fizzBuzz(input)).isEqualTo(expectedOutput);
     }
 
     @Test
