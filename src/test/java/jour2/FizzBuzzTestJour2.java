@@ -34,24 +34,24 @@ public class FizzBuzzTestJour2 {
     }
 
 
-    @ParameterizedTest(name = "Quand input est multiple de 3 doit retourner fizz")
+    @ParameterizedTest(name = "Quand input est {0} doit retourner {1}")
     @CsvSource({"3, fizz", "6, fizz"})
     @DisplayName("Doit retourner fizz")
-    public void doitRetournerfizzQuandInputEstMultipleDe3() {
-        assertThat(fizzBuzz.fizzBuzz(3)).isEqualTo("fizz");
+    public void doitRetournerfizzQuandInputEstMultipleDe3(int input, String expectedOutput) {
+        assertThat(fizzBuzz.fizzBuzz(input)).isEqualTo(expectedOutput);
     }
 
-    @ParameterizedTest(name = "Quand input est multiple de 5 doit retourner buzz")
+    @ParameterizedTest(name = "Quand input est {0} doit retourner {1}")
     @CsvSource({"5, buzz", "10, buzz"})
     @DisplayName("Doit retourner buzz")
-    public void doitRetournerBuzzQuandInputEstMultiple5() {
-        assertThat(fizzBuzz.fizzBuzz(5)).isEqualTo("buzz");
+    public void doitRetournerBuzzQuandInputEstMultiple5(int input, String expectedOutput) {
+        assertThat(fizzBuzz.fizzBuzz(input)).isEqualTo(expectedOutput);
     }
 
-    @ParameterizedTest(name = "Quand input est multiple de 15 doit retourner fizzbuzz")
+    @ParameterizedTest(name = "Quand input est {0} doit retourner {1}")
     @CsvSource({"15, fizzbuzz", "30, fizzbuzz"})
     @DisplayName("Doit retourner fizzbuzz")
-    public void doitRetournerfizzBuzzQuandInputEst15() {
-        assertThat(fizzBuzz.fizzBuzz(15)).isEqualTo("fizzbuzz");
+    public void doitRetournerfizzBuzzQuandInputEst15(int input, String expectedOutput) {
+        assertThat(fizzBuzz.fizzBuzz(input)).isEqualTo(expectedOutput);
     }
 }
