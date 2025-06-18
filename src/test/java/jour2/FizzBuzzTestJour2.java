@@ -8,6 +8,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 
+import java.util.Map;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzTestJour2 {
@@ -16,7 +18,11 @@ public class FizzBuzzTestJour2 {
 
     @BeforeEach
     void setUp() {
-        fizzBuzz = new FizzBuzz();
+        Map<Integer, String> specialValues = Map.of(
+                3, "fizz",
+                5, "buzz",
+                15, "fizzbuzz");
+        fizzBuzz = new FizzBuzz(specialValues);
     }
 
 
