@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -18,10 +19,9 @@ public class FizzBuzzTestJour2 {
 
     @BeforeEach
     void setUp() {
-        Map<Integer, String> specialValues = Map.of(
-                3, "fizz",
-                5, "buzz",
-                15, "fizzbuzz");
+        Map<Integer, String> specialValues = new LinkedHashMap<>();
+        specialValues.put(3, "fizz");
+        specialValues.put(5, "buzz");
         fizzBuzz = new FizzBuzz(specialValues);
     }
 
