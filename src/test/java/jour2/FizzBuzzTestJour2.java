@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FizzBuzzTestJour2 {
 
     @Test
-    public void testFizzBuzz() {
-        assertThat(1).isEqualTo(1);
+    public void doitRetourner1QuandInputEst1() {
+        assertThat(FizzBuzz.fizzBuzz(1)).isEqualTo("1");
     }
 }
