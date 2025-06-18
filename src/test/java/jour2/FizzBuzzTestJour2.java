@@ -15,20 +15,20 @@ public class FizzBuzzTestJour2 {
     @ParameterizedTest(name = "Quand input est {0} doit retourner {1}")
     @CsvSource({"1,1", "2,2"})
     @DisplayName("Doit retourner la même valeur que l'input")
-    public void doitRetourner1QuandInputEst1(int input, String expectedOutput) {
+    public void doitRetournerInputSansConversion(int input, String expectedOutput) {
         assertThat(FizzBuzz.fizzBuzz(input)).isEqualTo(expectedOutput);
     }
 
 
     @ParameterizedTest(name = "Quand input est multiple de 3 doit retourner fizz")
     @CsvSource({"3, fizz", "6, fizz"})
-    public void doitRetournerfizzQuandInputEst3() {
+    public void doitRetournerfizzQuandInputEstMultipleDe3() {
         assertThat(FizzBuzz.fizzBuzz(3)).isEqualTo("fizz");
     }
 
     @ParameterizedTest(name = "Quand input est multiple de 5 doit retourner buzz")
     @CsvSource({"5, buzz", "10, buzz"})
-    public void doitRetournerBuzzQuandInputEst5() {
+    public void doitRetournerBuzzQuandInputEstMultiple5() {
         assertThat(FizzBuzz.fizzBuzz(5)).isEqualTo("buzz");
     }
 
