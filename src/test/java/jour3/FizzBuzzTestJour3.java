@@ -34,4 +34,9 @@ public class FizzBuzzTestJour3 {
     public void doitRetournerBuzzQuandInputEst5() {
         assertThat(FizzBuzz.fizzBuzz(5)).isEqualTo("buzz");
     }
+
+    @Test
+    public void doitRetournerbuzzQuandInputEstMultipleDe5() {
+        assertThat(FizzBuzz.fizzBuzz(10)).isEqualTo("buzz");
+    }
 }
