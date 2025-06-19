@@ -2,9 +2,11 @@ package jour3;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -14,7 +16,10 @@ public class FizzBuzzTestJour3 {
 
     @BeforeEach
     void setUp() {
-        fizzBuzz = new FizzBuzz();
+        Map<Integer, String> specialValues = new LinkedHashMap<>();
+        specialValues.put(3, "fizz");
+        specialValues.put(5, "buzz");
+        fizzBuzz = new FizzBuzz(specialValues);
     }
 
 
