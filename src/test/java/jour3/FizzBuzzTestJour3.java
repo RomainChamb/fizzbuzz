@@ -1,5 +1,9 @@
 package jour3;
 
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class FizzBuzzTestJour3 {
 
     //TODO: Input 1 doit retourner "1"
@@ -10,4 +14,9 @@ public class FizzBuzzTestJour3 {
     //TODO: Input multiple de 5 doit retourner "buzz"
     //TODO: Input 15 doit retourner "fizzbuzz"
     //TODO: Input multiple de quinze doit retourner "fizzbuzz"
+
+    @Test
+    public void doitRetourner1QuandInputEst1() {
+        assertThat(FizzBuzz.fizzBuzz(1)).isEqualTo("1");
+    }
 }
