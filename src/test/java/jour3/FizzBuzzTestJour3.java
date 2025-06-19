@@ -6,7 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzTestJour3 {
 
-    //TODO: Input multiple de quinze doit retourner "fizzbuzz"
 
     @Test
     public void doitRetourner1QuandInputEst1() {
