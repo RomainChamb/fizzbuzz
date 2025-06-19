@@ -25,14 +25,11 @@ public class FizzBuzzTestJour3 {
     }
 
 
-    @Test
-    public void doitRetournerBuzzQuandInputEst5() {
-        assertThat(FizzBuzz.fizzBuzz(5)).isEqualTo("buzz");
-    }
-
-    @Test
-    public void doitRetournerbuzzQuandInputEstMultipleDe5() {
-        assertThat(FizzBuzz.fizzBuzz(10)).isEqualTo("buzz");
+    @ParameterizedTest(name = " Quand input est {0} doit retourner {1}")
+    @CsvSource({"5, buzz", "5, buzz"})
+    @DisplayName("Multiple de 5 doit retourner buzz")
+    public void doitRetournerBuzzQuandInputEst5(int input, String expected) {
+        assertThat(FizzBuzz.fizzBuzz(input)).isEqualTo(expected);
     }
 
     @Test
