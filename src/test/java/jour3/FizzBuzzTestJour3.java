@@ -1,31 +1,29 @@
 package jour3;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzTestJour3 {
 
 
-    @Test
-    public void doitRetourner1QuandInputEst1() {
-        assertThat(FizzBuzz.fizzBuzz(1)).isEqualTo("1");
+    @ParameterizedTest(name = "Quand input est {0} doit retourner {1}")
+    @CsvSource({"1,1","2,2"})
+    @DisplayName("Pas de conversion")
+    public void doitRetourner1QuandInputEst1(int input, String expected) {
+        assertThat(FizzBuzz.fizzBuzz(input)).isEqualTo(expected);
     }
 
-    @Test
-    public void doitRetourner2QuandInputEst2() {
-        assertThat(FizzBuzz.fizzBuzz(2)).isEqualTo("2");
+    @ParameterizedTest(name = " Quand input est {0} doit retourner {1}")
+    @CsvSource({"3, fizz", "6, fizz"})
+    @DisplayName("Multiple de 3 doit retourner fizz")
+    public void doitRetournerfizzQuandInputEst3(int input, String expected) {
+        assertThat(FizzBuzz.fizzBuzz(input)).isEqualTo(expected);
     }
 
-    @Test
-    public void doitRetournerfizzQuandInputEst3() {
-        assertThat(FizzBuzz.fizzBuzz(3)).isEqualTo("fizz");
-    }
-
-    @Test
-    public void doitRetournerfizzQuandInputEstMultipleDe4() {
-        assertThat(FizzBuzz.fizzBuzz(6)).isEqualTo("fizz");
-    }
 
     @Test
     public void doitRetournerBuzzQuandInputEst5() {
