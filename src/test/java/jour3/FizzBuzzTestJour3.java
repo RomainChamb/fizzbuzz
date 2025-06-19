@@ -49,6 +49,6 @@ public class FizzBuzzTestJour3 {
     @CsvSource({"15, fizzbuzz", "30, fizzbuzz"})
     @DisplayName("Multiple de 15 doit retourner fizzbuzz")
     public void doitRetournerfizzBuzzQuandInputEst15(int input, String expected) {
-        assertThat(FizzBuzz.fizzBuzz(input)).isEqualTo(expected);
+        assertThat(fizzBuzz.fizzBuzz(input)).isEqualTo(expected);
     }
 }
