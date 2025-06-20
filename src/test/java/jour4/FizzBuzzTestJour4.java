@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzTestJour4 {
@@ -14,7 +17,8 @@ public class FizzBuzzTestJour4 {
 
     @BeforeEach
     void setUp() {
-        fizzBuzzJour4 = new FizzBuzzJour4();
+        Map<Integer, String> specialValues = Map.of(3, "fizz", 5, "buzz");
+        fizzBuzzJour4 = new FizzBuzzJour4(specialValues);
     }
 
     @ParameterizedTest(name = "Doit retourner {1} quand input est {0}")
