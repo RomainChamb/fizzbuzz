@@ -6,8 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzTestJour4 {
 
-    //TODO : Input multiple 3 ET 5 doit retourner "fizzbuzz"
-
     @Test
     public void doitRetourner1QuandInputEst1() {
         assertThat(FizzBuzzJour4.fizzbuzz(1)).isEqualTo("1");
