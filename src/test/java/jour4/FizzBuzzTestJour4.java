@@ -15,7 +15,7 @@ public class FizzBuzzTestJour4 {
     //TODO : Input multiple 3 ET 5 doit retourner "fizzbuzz"
 
     @Test
-    public void fizzBuzzTestJour4() {
-        assertThat(true).isTrue();
+    public void doitRetourner1QuandInputEst1() {
+        assertThat(FizzBuzzJour4.fizzbuzz(1)).isEqualTo(1);
     }
 }
