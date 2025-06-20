@@ -1,20 +1,21 @@
 package jour4;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzTestJour4 {
 
-    @Test
-    public void doitRetourner1QuandInputEst1() {
-        assertThat(FizzBuzzJour4.fizzbuzz(1)).isEqualTo("1");
+    @ParameterizedTest(name = "Doit retourner {1} quand input est {0}")
+    @CsvSource({"1,1", "2,2"})
+    @DisplayName("Pas de transormation attendue")
+    public void doitRetourner1QuandInputEst1(int input, String expectedOutput) {
+        assertThat(FizzBuzzJour4.fizzbuzz(input)).isEqualTo(expectedOutput);
     }
 
-    @Test
-    public void doitRetourner2QuandInputEst2() {
-        assertThat(FizzBuzzJour4.fizzbuzz(2)).isEqualTo("2");
-    }
 
     @Test
     public void doitRetournerFizzQuandInputEst3() {
