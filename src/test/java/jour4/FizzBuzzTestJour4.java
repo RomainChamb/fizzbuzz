@@ -17,4 +17,9 @@ public class FizzBuzzTestJour4 {
     public void doitRetourner1QuandInputEst1() {
         assertThat(FizzBuzzJour4.fizzbuzz(1)).isEqualTo("1");
     }
+
+    @Test
+    public void doitRetourner2QuandInputEst2() {
+        assertThat(FizzBuzzJour4.fizzbuzz(2)).isEqualTo("2");
+    }
 }
