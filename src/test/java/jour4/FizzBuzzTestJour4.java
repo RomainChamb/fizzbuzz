@@ -24,14 +24,11 @@ public class FizzBuzzTestJour4 {
         assertThat(FizzBuzzJour4.fizzbuzz(input)).isEqualTo(expectedOutput);
     }
 
-    @Test
-    public void doitRetournerBuzzQuandInputEst5() {
-        assertThat(FizzBuzzJour4.fizzbuzz(5)).isEqualTo("buzz");
-    }
-
-    @Test
-    public void doitRetournerBuzzQuandInputEstMultipleDe5() {
-        assertThat(FizzBuzzJour4.fizzbuzz(10)).isEqualTo("buzz");
+    @ParameterizedTest(name = "Doit retourner {1} quand input est {0}")
+    @CsvSource({"5, buzz", "10, buzz"})
+    @DisplayName("Cas spécifique des multiples de 5")
+    public void doitRetournerBuzzQuandInputEst5(int input, String expectedOutput) {
+        assertThat(FizzBuzzJour4.fizzbuzz(input)).isEqualTo(expectedOutput);
     }
 
     @Test
