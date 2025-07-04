@@ -16,7 +16,6 @@ public class FizzBuzzJour6Test {
     }
 
     private static String fizzbuzz(int i) {
-        if(i == 2 ) return String.valueOf(i);
         return String.valueOf(i);
     }
 }
