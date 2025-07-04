@@ -37,9 +37,9 @@ public class FizzBuzzJour6Test {
 
 
     private static String fizzbuzz(int i) {
-        if(isMultiple(i, 15)) return fizz() + buzz();
+        if(isMultiple(i, 15)) return fizz(i) + buzz();
         if(isMultiple(i, 5)) return buzz();
-        if(isMultiple(i, 3)) return fizz();
+        if(isMultiple(i, 3)) return fizz(i);
         return String.valueOf(i);
     }
 
