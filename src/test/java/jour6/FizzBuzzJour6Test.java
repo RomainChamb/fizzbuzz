@@ -19,7 +19,7 @@ public class FizzBuzzJour6Test {
     }
 
 
-    private static String fizzbuzz() {
+    private static String fizzbuzz(int i) {
         return "1";
     }
 }
