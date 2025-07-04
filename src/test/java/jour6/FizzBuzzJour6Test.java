@@ -48,7 +48,8 @@ public class FizzBuzzJour6Test {
     }
 
     private static String buzz(int i) {
-        return "buzz";
+        if(isMultiple(i, 5)) return "buzz";
+        return "";
     }
 
     private static String fizz(int i) {
