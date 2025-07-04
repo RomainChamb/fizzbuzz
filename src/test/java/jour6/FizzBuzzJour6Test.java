@@ -42,7 +42,7 @@ public class FizzBuzzJour6Test {
         if(isMultiple(i, 15)) return result;
         if(isMultiple(i, 5)) return result;
         if(isMultiple(i, 3)) return result;
-        return String.valueOf(i);
+        return result;
     }
 
     private static boolean isMultiple(int i, int multiple) {
