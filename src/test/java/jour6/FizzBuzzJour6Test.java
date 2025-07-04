@@ -8,7 +8,11 @@ public class FizzBuzzJour6Test {
 
     @Test
     public void returnValueWhenIsNotMultiple() {
-        String fizzbuuzz = "1";
+        String fizzbuuzz = fizzbuzz();
         assertThat(fizzbuuzz).isEqualTo("1");
+    }
+
+    private static String fizzbuzz() {
+        return "1";
     }
 }
