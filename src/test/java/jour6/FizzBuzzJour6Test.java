@@ -8,19 +8,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzJour6Test {
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "Doit retourner {1} quand input est {0}")
     @CsvSource({"1, 1", "2, 2"})
     public void returnValueWhenIsNotMultiple(int input, String expectedOutput) {
         String fizzbuuzz = fizzbuzz(input);
         assertThat(fizzbuuzz).isEqualTo(expectedOutput);
     }
-
-    @Test
-    public void returnValueWhenIsNotMultipleBis() {
-        String fizzbuuzz = fizzbuzz(2);
-        assertThat(fizzbuuzz).isEqualTo("2");
-    }
-
 
     private static String fizzbuzz(int i) {
         if(i == 2 ) return "2";
