@@ -25,7 +25,7 @@ public class FizzBuzzJour6Test {
 
 
     private static String fizzbuzz(int i) {
-        if(i == 3) return "fizz";
+        if(i % 3 == 0) return "fizz";
         return String.valueOf(i);
     }
 }
