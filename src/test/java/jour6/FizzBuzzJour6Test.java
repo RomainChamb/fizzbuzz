@@ -39,7 +39,6 @@ public class FizzBuzzJour6Test {
     private static String fizzbuzz(int i) {
         String result = fizz(i) + buzz(i);
         if(result.isBlank()) return String.valueOf(i);
-        if(isMultiple(i, 3)) return result;
         return result;
     }
 
