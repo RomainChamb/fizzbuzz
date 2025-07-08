@@ -42,7 +42,7 @@ public class FizzBuzzJour7Test {
         String result = "";
         int[] keys = {3, 5};
         if(i % keys[0] == 0) result += specialValues.get(keys[0]);
-        if(i % 5 == 0) result += specialValues.get(5);
+        if(i % keys[1] == 0) result += specialValues.get(keys[1]);
         return result.length() == 0 ? String.valueOf(i) : result;
     }
 
