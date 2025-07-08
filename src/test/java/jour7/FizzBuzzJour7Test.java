@@ -41,12 +41,6 @@ public class FizzBuzzJour7Test {
     private static String fizzBuzz(int i) {
         Map<Integer, String> specialValues = specialValues();
         String result = "";
-        int[] keys = specialValues.keySet().stream().mapToInt(Integer::intValue).sorted().toArray();
-        int size = keys.length;
-        int index = 0;
-        while(index < size) {
-            index++;
-        }
         for(Map.Entry<Integer, String> entry : specialValues.entrySet()) {
             if(i % entry.getKey() == 0) result += specialValues.get(entry.getKey());
         }
