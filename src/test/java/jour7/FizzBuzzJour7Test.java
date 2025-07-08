@@ -8,6 +8,7 @@ public class FizzBuzzJour7Test {
 
     @Test
     public void test_XXX() {
-        assertThat("1").isEqualTo("1");
+        String fizzBuzz = "1";
+        assertThat(fizzBuzz).isEqualTo("1");
     }
 }
