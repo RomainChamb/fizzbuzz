@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzJour7Test {
@@ -34,6 +37,9 @@ public class FizzBuzzJour7Test {
 
 
     private static String fizzBuzz(int i) {
+        Map<Integer, String> specialValues = new HashMap<>();
+        specialValues.put(3, "fizz");
+        specialValues.put(5, "buzz");
         String result = "";
         if(i % 3 == 0) result += "fizz";
         if(i % 5 == 0) result += "buzz";
