@@ -40,7 +40,7 @@ public class FizzBuzzJour7Test {
     private static String fizzBuzz(int i) {
         Map<Integer, String> specialValues = specialValues();
         String result = "";
-        int[] keys = {3, 5};
+        int[] keys = specialValues.keySet().stream().mapToInt(Integer::intValue).sorted().toArray();
         if(i % keys[0] == 0) result += specialValues.get(keys[0]);
         if(i % keys[1] == 0) result += specialValues.get(keys[1]);
         return result.length() == 0 ? String.valueOf(i) : result;
