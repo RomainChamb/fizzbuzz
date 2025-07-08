@@ -6,6 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -38,6 +39,7 @@ public class FizzBuzzJour7Test {
 
     private static String fizzBuzz(int i) {
         Map<Integer, String> specialValues = specialValues();
+        Set<Integer> keys = specialValues.keySet();
         String result = "";
         if(i % 3 == 0) result += specialValues.get(3);
         if(i % 5 == 0) result += specialValues.get(5);
