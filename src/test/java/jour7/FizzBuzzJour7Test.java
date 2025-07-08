@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FizzBuzzJour7Test {
 
     @Test
-    public void test_XXX() {
+    public void shouldReturnValueWhenIsNotMultiple() {
         String fizzBuzz = fizzBuzz();
         assertThat(fizzBuzz).isEqualTo("1");
     }
