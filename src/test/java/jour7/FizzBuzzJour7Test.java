@@ -57,6 +57,7 @@ public class FizzBuzzJour7Test {
         Map<Integer, String> specialValues = new HashMap<>();
         specialValues.put(3, "fizz");
         specialValues.put(5, "buzz");
+        specialValues.put(7, "qix");
         return specialValues;
     }
 }
