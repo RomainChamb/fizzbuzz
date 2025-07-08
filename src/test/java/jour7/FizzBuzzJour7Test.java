@@ -40,6 +40,7 @@ public class FizzBuzzJour7Test {
     private static String fizzBuzz(int i) {
         Map<Integer, String> specialValues = specialValues();
         String result = "";
+        int[] keys = {3, 5};
         if(i % 3 == 0) result += specialValues.get(3);
         if(i % 5 == 0) result += specialValues.get(5);
         return result.length() == 0 ? String.valueOf(i) : result;
