@@ -42,7 +42,7 @@ public class FizzBuzzJour7Test {
         Map<Integer, String> specialValues = specialValues();
         String result = "";
         for(Map.Entry<Integer, String> entry : specialValues.entrySet()) {
-            if(i % entry.getKey() == 0) result += specialValues.get(entry.getKey());
+            if(i % entry.getKey() == 0) result += entry.getValue();
         }
         return result.length() == 0 ? String.valueOf(i) : result;
     }
