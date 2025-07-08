@@ -39,7 +39,6 @@ public class FizzBuzzJour7Test {
 
     private static String fizzBuzz(int i) {
         Map<Integer, String> specialValues = specialValues();
-        Set<Integer> keys = specialValues.keySet();
         String result = "";
         if(i % 3 == 0) result += specialValues.get(3);
         if(i % 5 == 0) result += specialValues.get(5);
