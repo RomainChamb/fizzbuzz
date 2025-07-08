@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -41,8 +42,12 @@ public class FizzBuzzJour7Test {
         Map<Integer, String> specialValues = specialValues();
         String result = "";
         int[] keys = specialValues.keySet().stream().mapToInt(Integer::intValue).sorted().toArray();
-        if(i % keys[0] == 0) result += specialValues.get(keys[0]);
-        if(i % keys[1] == 0) result += specialValues.get(keys[1]);
+        int size = keys.length;
+        int index = 0;
+        while(index < size) {
+            if(i % keys[index] == 0) result += specialValues.get(keys[index]);
+            index++;
+        }
         return result.length() == 0 ? String.valueOf(i) : result;
     }
 
