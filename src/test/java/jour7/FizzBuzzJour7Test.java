@@ -45,8 +45,10 @@ public class FizzBuzzJour7Test {
         int size = keys.length;
         int index = 0;
         while(index < size) {
-            if(i % keys[index] == 0) result += specialValues.get(keys[index]);
             index++;
+        }
+        for(Map.Entry<Integer, String> entry : specialValues.entrySet()) {
+            if(i % entry.getKey() == 0) result += specialValues.get(entry.getKey());
         }
         return result.length() == 0 ? String.valueOf(i) : result;
     }
