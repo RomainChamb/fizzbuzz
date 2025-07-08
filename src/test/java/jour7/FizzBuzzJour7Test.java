@@ -19,6 +19,7 @@ public class FizzBuzzJour7Test {
     }
 
     private static String fizzBuzz(int i) {
+        if(i == 2) return "2";
         return "1";
     }
 }
