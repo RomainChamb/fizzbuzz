@@ -12,6 +12,12 @@ public class FizzBuzzJour7Test {
         assertThat(fizzBuzz).isEqualTo("1");
     }
 
+    @Test
+    public void shouldReturnValueWhenIsNotMultipleBis() {
+        String fizzBuzz = fizzBuzz();
+        assertThat(fizzBuzz).isEqualTo("2");
+    }
+
     private static String fizzBuzz() {
         return "1";
     }
