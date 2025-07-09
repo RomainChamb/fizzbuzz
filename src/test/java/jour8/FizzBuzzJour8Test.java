@@ -33,9 +33,9 @@ public class FizzBuzzJour8Test {
     }
 
     private static String fizzbuzz(int i) {
-        if(i % 3 == 0 && i % 5 == 0) return "fizzbuzz";
-        if(i % 5 == 0) return "buzz";
-        if(i % 3 == 0) return "fizz";
-        return String.valueOf(i);
+        String result = "";
+        if(i % 3 == 0) result += "fizz";
+        if(i % 5 == 0) result += "buzz";
+        return result.isBlank() ? String.valueOf(i) : result;
     }
 }
