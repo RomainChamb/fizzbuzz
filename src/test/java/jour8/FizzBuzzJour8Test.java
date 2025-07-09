@@ -1,15 +1,18 @@
 package jour8;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzJour8Test {
 
-    @Test
-    public void shouldReturnValueWhenIsNotMultiple() {
-        String fizzbuzz = fizzbuzz(1);
-        assertThat(fizzbuzz).isEqualTo("1");
+    @ParameterizedTest
+    @CsvSource({"1, 1"})
+    public void shouldReturnValueWhenIsNotMultiple(int input, String expectedOutput) {
+        String fizzbuzz = fizzbuzz(input);
+        assertThat(fizzbuzz).isEqualTo(expectedOutput);
     }
 
     @Test
