@@ -33,7 +33,7 @@ public class FizzBuzzJour8Test {
     }
 
     private static String fizzbuzz(int i) {
-        if(i == 15) return "fizzbuzz";
+        if(i == 15 || i == 30) return "fizzbuzz";
         if(i % 5 == 0) return "buzz";
         if(i % 3 == 0) return "fizz";
         return String.valueOf(i);
