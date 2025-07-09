@@ -37,12 +37,10 @@ public class FizzBuzzJour8Test {
     private static String fizzbuzz(int i) {
         Map<Integer, String> specialValues = specialValues();
         String result = "";
-
-        String loopResult = "";
         for(Map.Entry<Integer, String> entry : specialValues.entrySet()) {
-            if(i % entry.getKey() == 0) loopResult += entry.getValue();
+            if(i % entry.getKey() == 0) result += entry.getValue();
         }
-        return loopResult.isBlank() ? String.valueOf(i) : loopResult;
+        return result.isBlank() ? String.valueOf(i) : result;
     }
 
     private static Map<Integer, String> specialValues() {
