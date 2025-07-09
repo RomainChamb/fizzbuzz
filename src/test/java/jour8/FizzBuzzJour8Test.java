@@ -14,12 +14,6 @@ public class FizzBuzzJour8Test {
         assertThat(fizzbuzz(input)).isEqualTo(expectedOutput);
     }
 
-    @Test
-    public void shouldReturnValueWhenIsNotMultipleBis() {
-        String fizzbuzz = fizzbuzz(2);
-        assertThat(fizzbuzz).isEqualTo("2");
-    }
-
     private static String fizzbuzz(int i) {
         return String.valueOf(i);
     }
