@@ -35,10 +35,14 @@ public class FizzBuzzJour8Test {
     }
 
     private static String fizzbuzz(int i) {
-        Map<Integer, String> specialValues = Map.of(3, "fizz", 5, "buzz");
+        Map<Integer, String> specialValues = specialValues();
         String result = "";
         if(i % 3 == 0) result += specialValues.get(3);
         if(i % 5 == 0) result += specialValues.get(5);
         return result.isBlank() ? String.valueOf(i) : result;
+    }
+
+    private static Map<Integer, String> specialValues() {
+        return Map.of(3, "fizz", 5, "buzz");
     }
 }
