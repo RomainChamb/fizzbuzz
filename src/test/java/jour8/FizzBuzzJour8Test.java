@@ -42,8 +42,6 @@ public class FizzBuzzJour8Test {
         for(Map.Entry<Integer, String> entry : specialValues.entrySet()) {
             if(i % entry.getKey() == 0) loopResult += entry.getValue();
         }
-        if(i % 3 == 0) result += specialValues.get(3);
-        if(i % 5 == 0) result += specialValues.get(5);
         return loopResult.isBlank() ? String.valueOf(i) : loopResult;
     }
 
