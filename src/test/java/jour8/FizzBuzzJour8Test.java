@@ -37,10 +37,10 @@ public class FizzBuzzJour8Test {
     private static final LinkedHashMap<Integer, String> specialValues = new LinkedHashMap<>(Map.of(3, "fizz", 5, "buzz"));
 
     private static String fizzbuzz(int i) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for(Map.Entry<Integer, String> entry : specialValues.entrySet()) {
-            if(i % entry.getKey() == 0) result += entry.getValue();
+            if(i % entry.getKey() == 0) result.append(entry.getValue());
         }
-        return result.isBlank() ? String.valueOf(i) : result;
+        return result.isEmpty() ? String.valueOf(i) : result.toString();
     }
 }
