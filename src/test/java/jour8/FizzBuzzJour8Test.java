@@ -43,8 +43,4 @@ public class FizzBuzzJour8Test {
         }
         return result.isBlank() ? String.valueOf(i) : result;
     }
-
-    private static Map<Integer, String> specialValues() {
-        return Map.of(3, "fizz", 5, "buzz");
-    }
 }
