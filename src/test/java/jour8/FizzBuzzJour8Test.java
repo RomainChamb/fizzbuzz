@@ -11,8 +11,7 @@ public class FizzBuzzJour8Test {
     @ParameterizedTest
     @CsvSource({"1, 1"})
     public void shouldReturnValueWhenIsNotMultiple(int input, String expectedOutput) {
-        String fizzbuzz = fizzbuzz(input);
-        assertThat(fizzbuzz).isEqualTo(expectedOutput);
+        assertThat(fizzbuzz(input)).isEqualTo(expectedOutput);
     }
 
     @Test
