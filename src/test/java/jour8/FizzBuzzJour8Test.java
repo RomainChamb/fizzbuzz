@@ -1,9 +1,9 @@
 package jour8;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -34,8 +34,9 @@ public class FizzBuzzJour8Test {
         assertThat(fizzbuzz(input)).isEqualTo(expectedOutput);
     }
 
+    private static final LinkedHashMap<Integer, String> specialValues = new LinkedHashMap<>(Map.of(3, "fizz", 5, "buzz"));
+
     private static String fizzbuzz(int i) {
-        Map<Integer, String> specialValues = specialValues();
         String result = "";
         for(Map.Entry<Integer, String> entry : specialValues.entrySet()) {
             if(i % entry.getKey() == 0) result += entry.getValue();
