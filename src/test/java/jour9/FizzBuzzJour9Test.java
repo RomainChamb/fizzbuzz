@@ -16,7 +16,7 @@ public class FizzBuzzJour9Test {
         //assertThat(fizzbuzz()).isEqualTo("2");
     }
 
-    private static String fizzbuzz() {
+    private static String fizzbuzz(int i) {
         return "1";
     }
 }
