@@ -37,13 +37,18 @@ public class FizzBuzzJour9Test {
 
 
     private static String fizzbuzz(int i) {
-        Map<Integer, String> specialValues = new LinkedHashMap<>();
-        specialValues.put(3, "fizz");
-        specialValues.put(5, "buzz");
+        Map<Integer, String> specialValues = specialValues();
         Integer[] keys = specialValues.keySet().toArray(new Integer[0]);
         String result = "";
         if(i % 3 == 0) result += specialValues.get(keys[0]);
         if(i % 5 == 0) result += specialValues.get(keys[1]);
         return result.isBlank() ? String.valueOf(i) : result;
+    }
+
+    private static Map<Integer, String> specialValues() {
+        Map<Integer, String> specialValues = new LinkedHashMap<>();
+        specialValues.put(3, "fizz");
+        specialValues.put(5, "buzz");
+        return specialValues;
     }
 }
