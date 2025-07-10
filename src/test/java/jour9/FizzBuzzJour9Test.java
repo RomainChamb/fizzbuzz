@@ -38,9 +38,8 @@ public class FizzBuzzJour9Test {
 
     private static String fizzbuzz(int i) {
         Map<Integer, String> specialValues = specialValues();
-        Integer[] keys = specialValues.keySet().toArray(new Integer[0]);
         String result = "";
-        for(int key : keys) {
+        for(int key : specialValues.keySet().toArray(new Integer[0])) {
             if(i % key == 0) result += specialValues.get(key);
         }
         return result.isBlank() ? String.valueOf(i) : result;
