@@ -39,8 +39,8 @@ public class FizzBuzzJour9Test {
         Map<Integer, String> specialValues = Map.of(3, "fizz", 5, "buzz");
         Integer[] keys = specialValues.keySet().toArray(new Integer[0]);
         String result = "";
-        if(i % 3 == 0) result += specialValues.get(keys[0]);
-        if(i % 5 == 0) result += specialValues.get(keys[1]);
+        if(i % keys[0] == 0) result += specialValues.get(keys[0]);
+        if(i % keys[1] == 0) result += specialValues.get(keys[1]);
         return result.isBlank() ? String.valueOf(i) : result;
     }
 }
