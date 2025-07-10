@@ -37,6 +37,10 @@ public class FizzBuzzJour9Test {
 
     private static String fizzbuzz(int i) {
         Map<Integer, String> specialValues = specialValues();
+        return fizzBuzzRules(i, specialValues);
+    }
+
+    private static String fizzBuzzRules(int i, Map<Integer, String> specialValues) {
         StringBuilder result = new StringBuilder() ;
         for(Map.Entry<Integer, String> entry : specialValues.entrySet()) {
             if(i % entry.getKey() == 0) result.append(entry.getValue());
