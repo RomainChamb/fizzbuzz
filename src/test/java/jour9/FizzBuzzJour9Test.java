@@ -51,6 +51,6 @@ public class FizzBuzzJour9Test {
         Map<Integer, String> specialValues = new LinkedHashMap<>();
         specialValues.put(3, "fizz");
         specialValues.put(5, "buzz");
-        return specialValues;
+        return Map.of(3, "fizz", 5, "buzz");
     }
 }
