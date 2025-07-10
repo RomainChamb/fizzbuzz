@@ -12,7 +12,6 @@ public class FizzBuzzJour9Test {
     }
 
     private static String fizzbuzz() {
-        String fizzbuzz = "1";
-        return fizzbuzz;
+        return "1";
     }
 }
