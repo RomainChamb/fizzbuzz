@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FizzBuzzJour9Test {
 
     @ParameterizedTest
-    @CsvSource({"1,1"})
+    @CsvSource({"1, 1", "2, 2"})
     public void shouldReturnValueWhenIsNotMutiple(int input, String expected) {
         assertThat(fizzbuzz(input)).isEqualTo(expected);
     }
