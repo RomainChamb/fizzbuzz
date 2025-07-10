@@ -40,8 +40,9 @@ public class FizzBuzzJour9Test {
         Map<Integer, String> specialValues = specialValues();
         Integer[] keys = specialValues.keySet().toArray(new Integer[0]);
         String result = "";
-        if(i % keys[0] == 0) result += specialValues.get(keys[0]);
-        if(i % keys[1] == 0) result += specialValues.get(keys[1]);
+        for(int key : keys) {
+            if(i % key == 0) result += specialValues.get(key);
+        }
         return result.isBlank() ? String.valueOf(i) : result;
     }
 
