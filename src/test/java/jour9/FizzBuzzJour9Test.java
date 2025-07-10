@@ -36,8 +36,7 @@ public class FizzBuzzJour9Test {
 
 
     private static String fizzbuzz(int i) {
-        Map<Integer, String> specialValues = specialValues();
-        return fizzBuzzRules(i, specialValues);
+        return fizzBuzzRules(i, specialValues());
     }
 
     private static String fizzBuzzRules(int i, Map<Integer, String> specialValues) {
