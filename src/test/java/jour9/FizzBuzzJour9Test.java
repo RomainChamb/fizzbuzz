@@ -38,7 +38,7 @@ public class FizzBuzzJour9Test {
     private static String fizzbuzz(int i) {
         Map<Integer, String> specialValues = Map.of(3, "fizz", 5, "buzz");
         String result = "";
-        if(i % 3 == 0) result += "fizz";
+        if(i % 3 == 0) result += specialValues.get(3);
         if(i % 5 == 0) result += "buzz";
         return result.isBlank() ? String.valueOf(i) : result;
     }
