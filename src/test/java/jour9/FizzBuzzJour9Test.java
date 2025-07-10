@@ -21,6 +21,7 @@ public class FizzBuzzJour9Test {
     }
 
     private static String fizzbuzz(int i) {
+        if(i == 3 ) return "fizz";
         return String.valueOf(i);
     }
 }
