@@ -8,7 +8,12 @@ public class FizzBuzzJour9Test {
 
     @Test
     public void testXXX() {
-        String fizzbuzz = "1";
+        String fizzbuzz = fizzbuzz();
         assertThat(fizzbuzz).isEqualTo("1");
+    }
+
+    private static String fizzbuzz() {
+        String fizzbuzz = "1";
+        return fizzbuzz;
     }
 }
