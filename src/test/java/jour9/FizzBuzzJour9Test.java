@@ -8,7 +8,7 @@ public class FizzBuzzJour9Test {
 
     @Test
     public void shouldReturnValueWhenIsNotMutiple() {
-        assertThat(fizzbuzz()).isEqualTo("1");
+        assertThat(fizzbuzz(1)).isEqualTo("1");
     }
 
     @Test
