@@ -13,7 +13,7 @@ public class FizzBuzzJour9Test {
 
     @Test
     public void shouldReturnValueWhenIsNotMutipleBiss() {
-        //assertThat(fizzbuzz()).isEqualTo("2");
+        assertThat(fizzbuzz(2)).isEqualTo("2");
     }
 
     private static String fizzbuzz(int i) {
