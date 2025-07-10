@@ -27,7 +27,7 @@ public class FizzBuzzJour9Test {
     }
 
     @ParameterizedTest
-    @CsvSource({"15, fizzbuzz"})
+    @CsvSource({"15, fizzbuzz", "30, fizzbuzz"})
     public void shouldReturnFizzBuzzWhenIsMutipleOf3And5(int input, String expected) {
         assertThat(fizzbuzz(input)).isEqualTo(expected);
     }
