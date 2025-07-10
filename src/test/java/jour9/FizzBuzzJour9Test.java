@@ -37,11 +37,11 @@ public class FizzBuzzJour9Test {
 
     private static String fizzbuzz(int i) {
         Map<Integer, String> specialValues = specialValues();
-        String result = "";
+        StringBuilder result = new StringBuilder() ;
         for(Map.Entry<Integer, String> entry : specialValues.entrySet()) {
-            if(i % entry.getKey() == 0) result += entry.getValue();
+            if(i % entry.getKey() == 0) result.append(entry.getValue());
         }
-        return result.isBlank() ? String.valueOf(i) : result;
+        return result.isEmpty() ? String.valueOf(i) : result.toString();
     }
 
     private static Map<Integer, String> specialValues() {
