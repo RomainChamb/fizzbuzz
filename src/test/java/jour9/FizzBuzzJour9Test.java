@@ -1,6 +1,5 @@
 package jour9;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -39,8 +38,8 @@ public class FizzBuzzJour9Test {
     private static String fizzbuzz(int i) {
         Map<Integer, String> specialValues = specialValues();
         String result = "";
-        for(Integer key : specialValues.keySet()) {
-            if(i % key == 0) result += specialValues.get(key);
+        for(Map.Entry<Integer, String> entry : specialValues.entrySet()) {
+            if(i % entry.getKey() == 0) result += entry.getValue();
         }
         return result.isBlank() ? String.valueOf(i) : result;
     }
